@@ -15,7 +15,7 @@
       context 'when the user exists' do
         it 'returns the user' do
           user_response = JSON.parse(response.body)
-          expect(user_response['id"]).to eq(user_id)
+          expect(user_response['id']).to eq(user_id)
         end
 
         it 'return status code 200' do
