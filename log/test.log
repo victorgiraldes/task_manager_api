@@ -6980,3 +6980,492 @@ Processing by Api::V1::SessionsController#create as JSON
 Completed 200 OK in 15ms (Views: 2.5ms | ActiveRecord: 1.8ms)
   [1m[35m (2.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.6ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'task-manager-api_test'[0m
+  [1m[35m (77.3ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (14.8ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'camilla@johns.biz' LIMIT 1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'DTKidmfPtqMqM81E_Bzz' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('camilla@johns.biz', '$2a$04$E7xTbY8kJXWQdjd8thoyCOkiNKrfMtWSjo5ldpeFxxEaZ.O0Ii6oq', '2018-11-30 17:00:08', '2018-11-30 17:00:08', 'DTKidmfPtqMqM81E_Bzz')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started DELETE "/sessions/DTKidmfPtqMqM81E_Bzz" for 127.0.0.1 at 2018-11-30 14:00:08 -0300
+  [1m[35m (55.7ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'sharonprice@rosenbaummarquardt.io' LIMIT 1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'GnrQfYB1z9FCTXfaLyFz' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('sharonprice@rosenbaummarquardt.io', '$2a$04$ePkFF2KJDsAEYBo4ZPKX/uZ1eaJ5LxB6aKD.NABqBAjQmBVUqmsNu', '2018-11-30 17:00:08', '2018-11-30 17:00:08', 'GnrQfYB1z9FCTXfaLyFz')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started DELETE "/sessions/GnrQfYB1z9FCTXfaLyFz" for 127.0.0.1 at 2018-11-30 14:00:08 -0300
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'dino@wehner.io' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'v1eKDVpZuSfZ4jtKwAHb' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('dino@wehner.io', '$2a$04$f6xEhXYhLxkpSjDWekigEuwSn0W5T5EmzyoXeROTkj1ARtu5H87he', '2018-11-30 17:00:08', '2018-11-30 17:00:08', 'v1eKDVpZuSfZ4jtKwAHb')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/sessions" for 127.0.0.1 at 2018-11-30 14:00:08 -0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"dino@wehner.io", "password"=>"[FILTERED]"}, "subdomain"=>"api"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'dino@wehner.io' LIMIT 1[0m
+Completed 401 Unauthorized in 5ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (3.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'brigettedaugherty@mayer.org' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'QhSxn8m5XEvDzFiH2dHJ' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('brigettedaugherty@mayer.org', '$2a$04$xAT3n4sJCEUoIm9ak9Z0tuiJJjz98lc5nfPitjzwxJ07rM/sYY75.', '2018-11-30 17:00:08', '2018-11-30 17:00:08', 'QhSxn8m5XEvDzFiH2dHJ')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/sessions" for 127.0.0.1 at 2018-11-30 14:00:08 -0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"brigettedaugherty@mayer.org", "password"=>"[FILTERED]"}, "subdomain"=>"api"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'brigettedaugherty@mayer.org' LIMIT 1[0m
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (2.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'vancerolfson@kuhnnienow.io' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'fmSKCoaym763QqqDDctS' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('vancerolfson@kuhnnienow.io', '$2a$04$8c5uXNgtr1ZkaOBPYd1V.Oi2ZnZ.QvNdbbcw3wMe6JBVT0HT1z1mO', '2018-11-30 17:00:08', '2018-11-30 17:00:08', 'fmSKCoaym763QqqDDctS')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/sessions" for 127.0.0.1 at 2018-11-30 14:00:08 -0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"vancerolfson@kuhnnienow.io", "password"=>"[FILTERED]"}, "subdomain"=>"api"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'vancerolfson@kuhnnienow.io' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'NV1yiobs2UkCzRSV9zNu' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = BINARY 'NV1yiobs2UkCzRSV9zNu' AND (`users`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE `users` SET `auth_token` = 'NV1yiobs2UkCzRSV9zNu' WHERE `users`.`id` = 5[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Completed 200 OK in 17ms (Views: 2.4ms | ActiveRecord: 2.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35m (2.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'leiekuvalis@swiftkuvalis.name' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'xPotGi9JNrc3HGB3SwVr' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('leiekuvalis@swiftkuvalis.name', '$2a$04$zY6RpOde7MOvehi/ct3fKOPE3bqV5YBK/oq5FkZORFL2L.yHcdHr2', '2018-11-30 17:00:08', '2018-11-30 17:00:08', 'xPotGi9JNrc3HGB3SwVr')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/sessions" for 127.0.0.1 at 2018-11-30 14:00:08 -0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"leiekuvalis@swiftkuvalis.name", "password"=>"[FILTERED]"}, "subdomain"=>"api"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'leiekuvalis@swiftkuvalis.name' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'TaAk_RBxtNcy1dUvgQ39' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = BINARY 'TaAk_RBxtNcy1dUvgQ39' AND (`users`.`id` != 6) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `users` SET `auth_token` = 'TaAk_RBxtNcy1dUvgQ39' WHERE `users`.`id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Completed 200 OK in 16ms (Views: 2.5ms | ActiveRecord: 1.9ms)
+  [1m[35m (3.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.6ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'task-manager-api_test'[0m
+  [1m[35m (77.3ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (14.2ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'nickyschultz@hickle.net' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'XsAvQT2JeasdzE-hUQxj' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('nickyschultz@hickle.net', '$2a$04$7hApcZgmlWrzwyfpoh7LQOuTgUya8I3TdPBXjmtWCPm.lp2DJ4.ci', '2018-11-30 17:00:57', '2018-11-30 17:00:57', 'XsAvQT2JeasdzE-hUQxj')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started DELETE "/sessions/XsAvQT2JeasdzE-hUQxj" for 127.0.0.1 at 2018-11-30 14:00:57 -0300
+  [1m[35m (76.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'tuan@corkerysteuber.name' LIMIT 1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = '8oZxWkvbtdmSMRAUMXxj' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('tuan@corkerysteuber.name', '$2a$04$.SLxI3fTBF7ARQWps647OeGu3uspTMS1SCmQirZa0zH81PWs9.DOi', '2018-11-30 17:00:57', '2018-11-30 17:00:57', '8oZxWkvbtdmSMRAUMXxj')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started DELETE "/sessions/8oZxWkvbtdmSMRAUMXxj" for 127.0.0.1 at 2018-11-30 14:00:57 -0300
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'renaldookeefe@marquardt.net' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'fCZGQUbu7eFCRUXSpMhb' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('renaldookeefe@marquardt.net', '$2a$04$yvxoQ0NK6J.Djq/.N9W5E.EyUb2Evk6tZqJXoB8/.29xBhYb3kPku', '2018-11-30 17:00:57', '2018-11-30 17:00:57', 'fCZGQUbu7eFCRUXSpMhb')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/sessions" for 127.0.0.1 at 2018-11-30 14:00:57 -0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"renaldookeefe@marquardt.net", "password"=>"[FILTERED]"}, "subdomain"=>"api"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'renaldookeefe@marquardt.net' LIMIT 1[0m
+Completed 401 Unauthorized in 7ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (2.6ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'nubiadamore@spencer.com' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = '1qBb3EBszxhUYgn8fibG' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('nubiadamore@spencer.com', '$2a$04$xyy17cfeAzeDcEbrE.aP2.yerOjhcYe3j6r.Tm7pu1zozf3TJSeVi', '2018-11-30 17:00:57', '2018-11-30 17:00:57', '1qBb3EBszxhUYgn8fibG')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/sessions" for 127.0.0.1 at 2018-11-30 14:00:57 -0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"nubiadamore@spencer.com", "password"=>"[FILTERED]"}, "subdomain"=>"api"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'nubiadamore@spencer.com' LIMIT 1[0m
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'fritzharvey@wuckertschoen.com' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'qWywzYyHBrAjg2Gq5_KK' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('fritzharvey@wuckertschoen.com', '$2a$04$qSNN4o2LLohtswro7KHySOf7SzX1AOadE8E0LQBQEyuGdUYkYiTs2', '2018-11-30 17:00:57', '2018-11-30 17:00:57', 'qWywzYyHBrAjg2Gq5_KK')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/sessions" for 127.0.0.1 at 2018-11-30 14:00:57 -0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"fritzharvey@wuckertschoen.com", "password"=>"[FILTERED]"}, "subdomain"=>"api"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'fritzharvey@wuckertschoen.com' LIMIT 1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'tpU-LDvAghHLymY8q-Tt' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = BINARY 'tpU-LDvAghHLymY8q-Tt' AND (`users`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `users` SET `auth_token` = 'tpU-LDvAghHLymY8q-Tt' WHERE `users`.`id` = 5[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Completed 200 OK in 17ms (Views: 2.6ms | ActiveRecord: 2.0ms)
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'caroll@berge.co' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'uR_xF-963zbaWNrgzYDz' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('caroll@berge.co', '$2a$04$nsh9JXyvqq6VL0XUsrBO5eeZvbeUz9D03xWMnEi8YW03ZjuRLFujK', '2018-11-30 17:00:57', '2018-11-30 17:00:57', 'uR_xF-963zbaWNrgzYDz')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/sessions" for 127.0.0.1 at 2018-11-30 14:00:57 -0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"caroll@berge.co", "password"=>"[FILTERED]"}, "subdomain"=>"api"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'caroll@berge.co' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'L2gq5Mo2fTqED72VT2sg' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = BINARY 'L2gq5Mo2fTqED72VT2sg' AND (`users`.`id` != 6) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `users` SET `auth_token` = 'L2gq5Mo2fTqED72VT2sg' WHERE `users`.`id` = 6[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Completed 200 OK in 17ms (Views: 2.9ms | ActiveRecord: 1.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  [1m[35m (1.7ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.6ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'task-manager-api_test'[0m
+  [1m[35m (21.8ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (13.4ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'williscrist@bednar.org' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = '-Cu4zEoRhc_pHwZQxvwQ' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('williscrist@bednar.org', '$2a$04$NHCUkJVtYGhdqoTJ45rV6usZe62BbzSoP/PSOv3U2OODG1EHs2vC6', '2018-11-30 17:19:46', '2018-11-30 17:19:46', '-Cu4zEoRhc_pHwZQxvwQ')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/sessions" for 127.0.0.1 at 2018-11-30 14:19:46 -0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"williscrist@bednar.org", "password"=>"[FILTERED]"}, "subdomain"=>"api"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'williscrist@bednar.org' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'CsZxd_zonmpvujE84Xrb' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = BINARY 'CsZxd_zonmpvujE84Xrb' AND (`users`.`id` != 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `users` SET `auth_token` = 'CsZxd_zonmpvujE84Xrb' WHERE `users`.`id` = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Completed 200 OK in 18ms (Views: 2.6ms | ActiveRecord: 1.7ms)
+  [1m[35m (1.7ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jarrettmoore@champlin.name' LIMIT 1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = '7StcpC2Fc9ZYsxPLZxHg' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('jarrettmoore@champlin.name', '$2a$04$P5.48NAgfV1zD9CdfNAMmerZB64MT4s6eKqQ6Lqq0SP04VtBPaA3a', '2018-11-30 17:19:46', '2018-11-30 17:19:46', '7StcpC2Fc9ZYsxPLZxHg')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/sessions" for 127.0.0.1 at 2018-11-30 14:19:46 -0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"jarrettmoore@champlin.name", "password"=>"[FILTERED]"}, "subdomain"=>"api"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'jarrettmoore@champlin.name' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = '1SN3iQyMrGsdCZYVXC7J' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = BINARY '1SN3iQyMrGsdCZYVXC7J' AND (`users`.`id` != 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `users` SET `auth_token` = '1SN3iQyMrGsdCZYVXC7J' WHERE `users`.`id` = 2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Completed 200 OK in 15ms (Views: 2.5ms | ActiveRecord: 1.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (2.9ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'marshallbartoletti@legros.info' LIMIT 1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'vFwLPJmoizyVmUysH9Q-' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('marshallbartoletti@legros.info', '$2a$04$3QhlzJ4jZQhYqWbwrGP6xuRhTwS7/Q3kbIPzjRD8xkuodf55LRDWO', '2018-11-30 17:19:46', '2018-11-30 17:19:46', 'vFwLPJmoizyVmUysH9Q-')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/sessions" for 127.0.0.1 at 2018-11-30 14:19:46 -0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"marshallbartoletti@legros.info", "password"=>"[FILTERED]"}, "subdomain"=>"api"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marshallbartoletti@legros.info' LIMIT 1[0m
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (2.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'corinnemosciski@flatleykulas.io' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'V2optySJc9cs8hLksg9j' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('corinnemosciski@flatleykulas.io', '$2a$04$OEbVNAmGAgzlrjUxFXoQVusg.AjjdFE/qFw1EU9QfUUYF5RE5pbZi', '2018-11-30 17:19:46', '2018-11-30 17:19:46', 'V2optySJc9cs8hLksg9j')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/sessions" for 127.0.0.1 at 2018-11-30 14:19:46 -0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"corinnemosciski@flatleykulas.io", "password"=>"[FILTERED]"}, "subdomain"=>"api"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'corinnemosciski@flatleykulas.io' LIMIT 1[0m
+Completed 401 Unauthorized in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'dianawalker@connmacejkovic.io' LIMIT 1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'uMxyzweN5H827DxGo2DH' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('dianawalker@connmacejkovic.io', '$2a$04$XIOZx3NEhX2BX2lVItV.j.7xJ6jdsLIt3kFpXkMP/APqb4mXjbg02', '2018-11-30 17:19:46', '2018-11-30 17:19:46', 'uMxyzweN5H827DxGo2DH')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started DELETE "/sessions/uMxyzweN5H827DxGo2DH" for 127.0.0.1 at 2018-11-30 14:19:46 -0300
+Processing by Api::V1::SessionsController#destroy as JSON
+  Parameters: {"subdomain"=>"api", "id"=>"uMxyzweN5H827DxGo2DH", "session"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`auth_token` = 'uMxyzweN5H827DxGo2DH' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'mTxBAiJuSzXufPdiqs1Y' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = BINARY 'mTxBAiJuSzXufPdiqs1Y' AND (`users`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `users` SET `auth_token` = 'mTxBAiJuSzXufPdiqs1Y' WHERE `users`.`id` = 5[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.8ms)
+  [1m[35m (2.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'deangelobeer@veumconnelly.org' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'gn5UV-Vy-pmRYakEs2SK' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('deangelobeer@veumconnelly.org', '$2a$04$39SSpnnFkMvPV288KhDFQOx1AzSnwXO7nAvKbXXL1Mw1Y3ygjyzC2', '2018-11-30 17:19:46', '2018-11-30 17:19:46', 'gn5UV-Vy-pmRYakEs2SK')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started DELETE "/sessions/gn5UV-Vy-pmRYakEs2SK" for 127.0.0.1 at 2018-11-30 14:19:46 -0300
+Processing by Api::V1::SessionsController#destroy as JSON
+  Parameters: {"subdomain"=>"api", "id"=>"gn5UV-Vy-pmRYakEs2SK", "session"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`auth_token` = 'gn5UV-Vy-pmRYakEs2SK' LIMIT 1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'q-aivmSmuVU1Tq8xskQA' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = BINARY 'q-aivmSmuVU1Tq8xskQA' AND (`users`.`id` != 6) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `users` SET `auth_token` = 'q-aivmSmuVU1Tq8xskQA' WHERE `users`.`id` = 6[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.9ms)
+  [1m[35m (2.6ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.6ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'task-manager-api_test'[0m
+  [1m[35m (76.3ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (14.6ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'dominic@emmerich.net' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'YDYn2AsY3XYXaTQy9hft' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('dominic@emmerich.net', '$2a$04$cR81ybYzfL4lAg6avFl0MeXmkflNiJSE4V3wr32G.fxfD9xEpKpfe', '2018-11-30 17:21:21', '2018-11-30 17:21:21', 'YDYn2AsY3XYXaTQy9hft')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/sessions" for 127.0.0.1 at 2018-11-30 14:21:21 -0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"dominic@emmerich.net", "password"=>"[FILTERED]"}, "subdomain"=>"api"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'dominic@emmerich.net' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'YCEB_oULKzxeJ7W1G7MW' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = BINARY 'YCEB_oULKzxeJ7W1G7MW' AND (`users`.`id` != 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `users` SET `auth_token` = 'YCEB_oULKzxeJ7W1G7MW' WHERE `users`.`id` = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Completed 200 OK in 18ms (Views: 2.3ms | ActiveRecord: 1.9ms)
+  [1m[35m (63.6ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'maximotowne@greenholtfritsch.net' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'JsJ2fCvgFsbYH4tnuY6J' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('maximotowne@greenholtfritsch.net', '$2a$04$2/S5lLMsTWf1HOYA2tYwde/jpEViZNrMY8kkgfiNkm6RW1gsbFZ9K', '2018-11-30 17:21:21', '2018-11-30 17:21:21', 'JsJ2fCvgFsbYH4tnuY6J')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/sessions" for 127.0.0.1 at 2018-11-30 14:21:21 -0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"maximotowne@greenholtfritsch.net", "password"=>"[FILTERED]"}, "subdomain"=>"api"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'maximotowne@greenholtfritsch.net' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = '9eJdytAGzz9BTLiNKPEa' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = BINARY '9eJdytAGzz9BTLiNKPEa' AND (`users`.`id` != 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `users` SET `auth_token` = '9eJdytAGzz9BTLiNKPEa' WHERE `users`.`id` = 2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Completed 200 OK in 16ms (Views: 2.9ms | ActiveRecord: 1.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (2.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'mitchel@witting.co' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'ysxS8EBWnjtbYrD6y6Ek' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('mitchel@witting.co', '$2a$04$BOO1uy11gLPXp7WOoIyk6uGM/mAZu5UDwT8r5KW8oV.mgUaKGO53C', '2018-11-30 17:21:21', '2018-11-30 17:21:21', 'ysxS8EBWnjtbYrD6y6Ek')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/sessions" for 127.0.0.1 at 2018-11-30 14:21:21 -0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"mitchel@witting.co", "password"=>"[FILTERED]"}, "subdomain"=>"api"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'mitchel@witting.co' LIMIT 1[0m
+Completed 401 Unauthorized in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'juli@moen.io' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'x9ZosRjLb8esix9_B4zT' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('juli@moen.io', '$2a$04$IMU23WGpvPuEGqSBaynoF.9EIDh8uu01Ub5RlAY5WgspC9IhZOe02', '2018-11-30 17:21:21', '2018-11-30 17:21:21', 'x9ZosRjLb8esix9_B4zT')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/sessions" for 127.0.0.1 at 2018-11-30 14:21:21 -0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"juli@moen.io", "password"=>"[FILTERED]"}, "subdomain"=>"api"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'juli@moen.io' LIMIT 1[0m
+Completed 401 Unauthorized in 5ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (2.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'lynsey@sengerconn.biz' LIMIT 1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'JxzeZvYebVccQt-XjxQ3' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('lynsey@sengerconn.biz', '$2a$04$dfouoot.CCY8RDYUNFIM5OScPmrXP7kGssN/Bg3D2XvQh3rVY7WFC', '2018-11-30 17:21:21', '2018-11-30 17:21:21', 'JxzeZvYebVccQt-XjxQ3')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started DELETE "/sessions/JxzeZvYebVccQt-XjxQ3" for 127.0.0.1 at 2018-11-30 14:21:21 -0300
+Processing by Api::V1::SessionsController#destroy as JSON
+  Parameters: {"subdomain"=>"api", "id"=>"JxzeZvYebVccQt-XjxQ3", "session"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`auth_token` = 'JxzeZvYebVccQt-XjxQ3' LIMIT 1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'YdedM3Bwae6JYtQK6eP-' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = BINARY 'YdedM3Bwae6JYtQK6eP-' AND (`users`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `users` SET `auth_token` = 'YdedM3Bwae6JYtQK6eP-' WHERE `users`.`id` = 5[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Completed 204 No Content in 12ms (ActiveRecord: 1.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`auth_token` = 'JxzeZvYebVccQt-XjxQ3' LIMIT 1[0m
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'joellenkeebler@koepp.net' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'wUVsCXX4GMJs7n4ucBzN' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `auth_token`) VALUES ('joellenkeebler@koepp.net', '$2a$04$ecT/G1G6BpHAPEy7fcSPc.vflVJ2AFsXNQnkL6sAva5LI8.oIB.FC', '2018-11-30 17:21:21', '2018-11-30 17:21:21', 'wUVsCXX4GMJs7n4ucBzN')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started DELETE "/sessions/wUVsCXX4GMJs7n4ucBzN" for 127.0.0.1 at 2018-11-30 14:21:21 -0300
+Processing by Api::V1::SessionsController#destroy as JSON
+  Parameters: {"subdomain"=>"api", "id"=>"wUVsCXX4GMJs7n4ucBzN", "session"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`auth_token` = 'wUVsCXX4GMJs7n4ucBzN' LIMIT 1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = 'fXuVSyxe_k_4WBySH1mv' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`auth_token` = BINARY 'fXuVSyxe_k_4WBySH1mv' AND (`users`.`id` != 6) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `users` SET `auth_token` = 'fXuVSyxe_k_4WBySH1mv' WHERE `users`.`id` = 6[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Completed 204 No Content in 13ms (ActiveRecord: 1.9ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
