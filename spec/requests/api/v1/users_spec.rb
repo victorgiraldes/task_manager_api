@@ -6,7 +6,8 @@
     let(:headers) do
       {
         'Accept' => 'application/vnd.taskmanager.v1',
-        'Contect-Type' => Mime[:json].to_s
+        'Contect-Type' => Mime[:json].to_s,
+        'Authorization' => user.auth_token
       }
     end
 

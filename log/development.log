@@ -754,3 +754,53 @@ Migrating to AddAuthTokenToUsers (20181127132846)
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('6102324819594780000', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (5.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateTasks (20181212125213)
+  [1m[35m (74.3ms)[0m  [1m[35mCREATE TABLE `tasks` (`id` int AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `description` text, `done` tinyint(1), `deadline` datetime, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_tasks_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_4d2a9e4d7e`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20181212125213')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.1ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('6102324819594780000')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (5.0ms)[0m  [1m[35mSHOW CREATE TABLE `tasks`[0m
+  [1m[35m (17.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tasks'[0m
+  [1m[35m (0.9ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (4.7ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (102.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS `task-manager-api_test`[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE DATABASE `task-manager-api_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE `tasks` (`id` int AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `description` text, `done` tinyint(1), `deadline` datetime, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_tasks_on_user_id` USING btree (`user_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `auth_token` varchar(255), UNIQUE INDEX `index_users_on_auth_token` USING btree (`auth_token`), UNIQUE INDEX `index_users_on_email` USING btree (`email`), UNIQUE INDEX `index_users_on_reset_password_token` USING btree (`reset_password_token`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (35.8ms)[0m  [1m[35mALTER TABLE `tasks` ADD CONSTRAINT `fk_rails_4d2a9e4d7e`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (2.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20181212125213)[0m
+  [1m[35m (2.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES
+(20181127132846),
+(20181122171906);
+
+[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-12-12 13:39:52', '2018-12-12 13:39:52')[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
